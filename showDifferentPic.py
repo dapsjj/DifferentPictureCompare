@@ -41,8 +41,8 @@ ret, binary = cv2.threshold(closed, 250, 255, cv2.THRESH_BINARY)
 _, contours, hierarchy = cv2.findContours(binary, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 # 绘制轮廓
 
-cv2.drawContours(img1, contours, -1, (255, 255, 0), 3)
-cv2.drawContours(img, contours, -1, (255, 255, 0), 3)
+cv2.drawContours(img1, contours, 1, (255, 255, 0), 3)
+cv2.drawContours(img, contours, 1, (255, 255, 0), 3)
 # 绘制结果
 cv2.imshow("diff", img)#img1和img2对比不同的部分
 cv2.imshow("short", img1)#显示
